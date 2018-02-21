@@ -3,7 +3,9 @@ var waves = document.getElementById("sound-waves");
 waves.volume = 0.1;
 
 bird = new Audio("sound/bird.mp3");
+bird.volume = 0.2;
 window.setInterval(function () {
+
     bird.play();
 }, Math.random()+4 * 5000);
 
@@ -21,6 +23,7 @@ console.log(scrollAmount);
 	
 // fly through text box	
 document.getElementById("flying1").style.bottom = 100 * (scrollAmount - 1) + "vh";
+document.getElementById("flying2").style.bottom = 100 * (scrollAmount - 7) + "vh";
 }
 
 // events
@@ -29,10 +32,23 @@ document.onscroll = function(){
    document.body.onscroll =  scrollEffects;
 
 //koncept header effekt
-if(scrollAmount>0.7){
-	document.getElementById("koncept").style.letterSpacing = 4+"px";
+//if(scrollAmount>1.7){
+//	document.getElementById("historien").style.letterSpacing = 4+"px";
+//}
+	
+if(scrollAmount>16.6){
+	document.getElementById("lastwords").style.transform = "scale("+1.4+")";
+	document.getElementById("lastwords").style.opacity = 1;
 }
-
+if(scrollAmount>13.7){
+	document.getElementById("leftanimation").style.marginLeft = 42+"px";
+	document.getElementById("leftanimation").style.opacity = 1;
+}
+	if(scrollAmount>14.7){
+	document.getElementById("rightanimation").style.marginRight = 42+"px";
+	document.getElementById("rightanimation").style.opacity = 1;
+}
+	
 };
 
 
