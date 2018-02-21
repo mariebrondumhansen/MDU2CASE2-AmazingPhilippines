@@ -58,7 +58,7 @@ body {
 .flyingfix{
 	position: absolute;
 	align-self: center;
-	margin-top: 10%;
+	margin: auto;
 	
 }
 
@@ -103,6 +103,8 @@ body {
 }
 
 #content8{
+	flex-direction: row;
+	justify-content: space-around;
 }
 #content9{
 background-image: url(images/backgrounds/dude1.jpg);
